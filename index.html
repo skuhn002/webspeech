@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Web Speech API Example</title>
+</head>
+<body>
+  <h1>Web Speech API Example</h1>
+  <button id="startSpeechRecognition">Start Speech Recognition</button>
+  <div id="output"></div>
+
+  <script>
+    const startSpeechRecognitionBtn = document.getElementById('startSpeechRecognition');
+    const outputDiv = document.getElementById('output');
+
+    const recognition = new webkitSpeechRecognition();
+
+    startSpeechRecognitionBtn.addEventListener('click', () => {
+      recognition.start();
+    });
+
+    recognition.onresult = (event) => {
+      const transcript = event.results[0][0].transcript;
+      outputDiv.textContent = `You said: ${transcript}`;
+    };
+  </script>
+</body>
+</html>

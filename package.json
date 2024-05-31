@@ -1,0 +1,14 @@
+{
+  "name": "webspeech",
+  "version": "1.0.0",
+  "description": "Learn to use WebSpeech API through a basic example.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Kuhn",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
